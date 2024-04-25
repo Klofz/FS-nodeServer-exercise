@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3901;
+const PORT = process.env.PORT || 3901;
 const URL1 = "/api/persons";
 
 app.use(cors());
