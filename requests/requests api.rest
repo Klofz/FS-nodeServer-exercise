@@ -1,0 +1,43 @@
+
+
+###
+GET http://localhost:3901/api/persons/
+
+###
+GET http://localhost:3901/api/persons/662ff4f6859b3c0c0db1468f
+
+###
+GET http://localhost:3001/api/notes/5c41c90e84d891c15dfa3431
+
+###
+POST http://localhost:3901/api/persons/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "ae",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "number": "ae"
+}
+
+###
+POST http://localhost:3901/api/persons
+Content-Type: application/json
+
+{
+    "name": "Miau1",
+    "time": "Wed, 21 Oct 20134233333327:50 GMT",
+    "number": "22-2222"
+}
+
+###
+Delete http://localhost:3901/api/persons/663004e097e4608b975bbc66
+
+###
+PUT http://localhost:3901/api/persons/662c1b46a288b6aa22969a98
+Content-Type: application/json
+
+{
+    "name": "Mi1",
+    "number": 131658498
+}
+
