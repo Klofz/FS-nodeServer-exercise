@@ -1,43 +1,40 @@
 
 
 ###
-GET http://localhost:3901/api/persons/
+GET http://localhost:3901/api/blogs/
 
 ###
-GET http://localhost:3901/api/persons/662ff4f6859b3c0c0db1468f
+GET http://localhost:3901/api/blogs/663d21b9c637b809c55f912d
 
 ###
-GET http://localhost:3001/api/notes/5c41c90e84d891c15dfa3431
-
-###
-POST http://localhost:3901/api/persons/ HTTP/1.1
+POST http://localhost:3901/api/blogs/ HTTP/1.1
 content-type: application/json
 
 {
-    "name": "ae",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT",
-    "number": "ae"
+  "title": "random title",
+  "author": "some author",
+  "url": "some random url",
+  "likes": 15
 }
 
 ###
-POST http://localhost:3901/api/persons
+POST http://localhost:3901/api/blogs
 Content-Type: application/json
 
 {
-    "name": "Miau1",
-    "time": "Wed, 21 Oct 20134233333327:50 GMT",
-    "number": "22-2222"
+  "title": "random title",
+  "url": "some random url",
+  "likes": 15
 }
 
 ###
-Delete http://localhost:3901/api/persons/663004e097e4608b975bbc66
+Delete http://localhost:3901/api/blogs/663d30af7331938f0dc9fc2b
 
 ###
-PUT http://localhost:3901/api/persons/662c1b46a288b6aa22969a98
+PUT http://localhost:3901/api/blogs/663d32ef29ffd19178d3577b
 Content-Type: application/json
 
 {
-    "name": "Mi1",
-    "number": 131658498
-}
+    "author": "AAAAAAAAAAA"
+  }
 
