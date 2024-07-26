@@ -1,31 +1,27 @@
 {
-  "name": "exercise-node",
+  "name": "ec-shop-be",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index.js",
-    "dev": "cross-env NODE_ENV=development nodemon index.js",
-    "test": "cross-env NODE_ENV=test node --test",
-    "debug": "nodemon --inspect index.js",
-    "old-test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rmdir /s /q distr && cd ../exercisebench && npm run build && xcopy /E /I dist ..\\exercise-node\\distr",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild-updated && git push",
-    "testpart": "cross-env NODE_ENV=test node ./tests/blogPost_api.test.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "start-2": "ts-node src/index.ts",
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node build/index.js"
   },
-  "author": "Bleriz",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "express-async-errors": "^3.1.1",
-    "mongoose": "^8.3.2",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0",
-    "supertest": "^7.0.0"
+    "uuid": "^10.0.0"
   }
 }
