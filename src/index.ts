@@ -4,7 +4,7 @@ import filtersRouter from "./routers/filters";
 import CONFIG from "./utils/config";
 
 const app = express();
-app.use(express.static("dist"));
+app.use(express.static("static_dist"));
 app.use(express.json());
 
 const PORT = CONFIG.PORT;
