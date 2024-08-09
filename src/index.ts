@@ -9,7 +9,7 @@ import variantsRouter from "./routers/variantsRouter";
 import variantCategoriesRouter from "./routers/variantCategoriesRouter";
 
 const app = express();
-app.use(express.static("dist"));
+app.use(express.static("static"));
 app.use(express.json());
 
 const PORT = CONFIG.PORT;
