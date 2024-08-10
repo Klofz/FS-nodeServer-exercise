@@ -9,7 +9,7 @@ import variantsRouter from "./routers/variantsRouter";
 import variantCategoriesRouter from "./routers/variantCategoriesRouter";
 
 const app = express();
-app.use(express.static("static"));
+
 app.use(express.json());
 
 const PORT = CONFIG.PORT;
@@ -27,6 +27,10 @@ app.use("/api/products", productsRouter);
 app.use("/api/product-categories", productCategoriesRouter);
 app.use("/api/variants", variantsRouter);
 app.use("/api/variant-categories", variantCategoriesRouter);
+
+app.use("/", express.static("static"));
+app.use("/*", express.static("static"));
+// app.use("/+*", express.static("static"));
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
